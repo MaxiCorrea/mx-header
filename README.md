@@ -13,16 +13,14 @@ npm install --save mx-header
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
+import { MxHeader } from 'mx-header'
 
-import MyComponent from 'mx-header'
-import 'mx-header/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return <MxHeader tooltipText='Help text'></MxHeader>
 }
+export default App
+
 ```
 
 ## License

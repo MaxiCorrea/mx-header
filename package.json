@@ -1,6 +1,6 @@
 {
-  "name": "mx-header",
-  "version": "1.0.0",
+  "name": "@maxicorrea/mx-header",
+  "version": "1.0.1",
   "description": "React MxHeader Component",
   "author": "MaxiCorrea",
   "license": "MIT",
