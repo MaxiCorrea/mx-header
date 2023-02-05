@@ -1,10 +1,7 @@
 import React from 'react'
-
-import { ExampleComponent } from 'mx-header'
-import 'mx-header/dist/index.css'
+import { MxHeader } from 'mx-header'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <MxHeader tooltipText='Help text'></MxHeader>
 }
-
 export default App
