@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { makeStyles, Tooltip } from '@material-ui/core'
-import Hidden from '@material-ui/core/Hidden'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 
@@ -92,18 +91,13 @@ export const MxHeader: React.FC<IMxHeaderProps> = (props) => {
     </div>
   )
 
+  console.log(leftLinks ? 1 : 2 );        
+
   return (
     <AppBar className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
-        {leftLinks ? avatar : null}
         <div className={classes.flex}>
-          {leftLinks ? (
-            <Hidden smDown implementation='css'>
-              {leftLinks}
-            </Hidden>
-          ) : (
-            avatar
-          )}
+          {leftLinks ? leftLinks : avatar }
         </div>
         {rightLinks ? <div>{rightLinks}</div> : null}
       </Toolbar>
