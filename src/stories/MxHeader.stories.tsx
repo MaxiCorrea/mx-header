@@ -24,13 +24,13 @@ export const DefaultTooltipStory: Story = {
   }
 }
 
-/*export const DefaultLogoOnclickStory: Story = {
+export const DefaultLogoOnclickStory: Story = {
   args: {
     onClickLogo: () => {
       alert('Click Logo')
     }
   }
-}*/
+}
 
 export const WithLogoStory: Story = {
   args: {

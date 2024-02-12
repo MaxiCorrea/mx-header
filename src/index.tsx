@@ -68,11 +68,11 @@ interface IMxHeaderProps {
    * onClick logo callback
    * @returns 
    */
-  //readonly onClickLogo?: () => void
+  readonly onClickLogo?: () => void
 }
 
 export const MxHeader: React.FC<IMxHeaderProps> = (props) => {
-  const { leftLinks, rightLinks, tooltipText, logoSrc, /*onClickLogo*/ } = props
+  const { leftLinks, rightLinks, tooltipText, logoSrc, onClickLogo } = props
   const classes = useMxHeaderStyles()
 
   const avatar = (
@@ -81,8 +81,8 @@ export const MxHeader: React.FC<IMxHeaderProps> = (props) => {
         title={tooltipText}
         aria-label='logo'
         placement='bottom-start'
-        //onClick={onClickLogo}
-        //className={onClickLogo ? classes.logoClickable : undefined}
+        onClick={onClickLogo}
+        className={onClickLogo ? classes.logoClickable : undefined}
       >
         {logoSrc === undefined ? (
           <div aria-label='logo' className={classes.avatar}>
