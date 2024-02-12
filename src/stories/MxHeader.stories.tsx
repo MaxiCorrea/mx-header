@@ -46,12 +46,3 @@ export const WithLogoOnclickStory: Story = {
     }
   }
 }
-
-export const WithLogoOnclickLeftLinkStory: Story = {
-  args: {
-    logoSrc: `${logo.toString()}`,
-    onClickLogo: () => {
-      alert('Click Logo')
-    }
-  }
-}
