@@ -9,6 +9,7 @@ const useMxHeaderStyles = makeStyles(() => ({
     '& > *': {
       margin: 0
     },
+    maxHeight : '45px',
     marginRight: '30px',
     marginLeft: '6px'
   },
@@ -90,8 +91,6 @@ export const MxHeader: React.FC<IMxHeaderProps> = (props) => {
       </Tooltip>
     </div>
   )
-
-  console.log(leftLinks ? 1 : 2 );        
 
   return (
     <AppBar className={classes.appBar}>
