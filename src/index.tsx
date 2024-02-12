@@ -48,15 +48,31 @@ const useMxHeaderStyles = makeStyles(() => ({
 }))
 
 interface IMxHeaderProps {
+  /**
+   * Show Tooltip Text in logo
+   */
   readonly tooltipText: string
+  /**
+   * Left React.Node
+   */
   readonly leftLinks?: React.ReactNode
+  /**
+   * Right React.Node
+   */
   readonly rightLinks?: React.ReactNode
+  /**
+   * src directory for log
+   */
   readonly logoSrc?: string
-  readonly onClickLogo?: () => void
+  /**
+   * onClick logo callback
+   * @returns 
+   */
+  //readonly onClickLogo?: () => void
 }
 
 export const MxHeader: React.FC<IMxHeaderProps> = (props) => {
-  const { leftLinks, rightLinks, tooltipText, logoSrc, onClickLogo } = props
+  const { leftLinks, rightLinks, tooltipText, logoSrc, /*onClickLogo*/ } = props
   const classes = useMxHeaderStyles()
 
   const avatar = (
@@ -65,8 +81,8 @@ export const MxHeader: React.FC<IMxHeaderProps> = (props) => {
         title={tooltipText}
         aria-label='logo'
         placement='bottom-start'
-        onClick={onClickLogo}
-        className={onClickLogo ? classes.logoClickable : undefined}
+        //onClick={onClickLogo}
+        //className={onClickLogo ? classes.logoClickable : undefined}
       >
         {logoSrc === undefined ? (
           <div aria-label='logo' className={classes.avatar}>
